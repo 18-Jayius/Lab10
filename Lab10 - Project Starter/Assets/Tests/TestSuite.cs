@@ -74,7 +74,7 @@ namespace Tests
         [Test]
         public void TestSqrt()
         {
-            result = Calculator.CalculateSqrt(100, "√");
+            result = Calculator.CalculatePair(100, 0,"√");
             Assert.AreEqual(result, 10f);
         }
 
@@ -82,7 +82,7 @@ namespace Tests
         public IEnumerator TestUnitySqrt()
         {
             yield return null;
-            result = Calculator.CalculateSqrt(100, "√");
+            result = Calculator.CalculatePair(100, 0, "√");
             Assert.AreEqual(result, 10f);
         }
 

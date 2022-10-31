@@ -39,7 +39,9 @@ public class Calculator : MonoBehaviour {
 				case "/":
 				case "*":
 				case "=":
-				Calculate(s);
+                case "^":
+                case "√":
+                Calculate(s);
 				break;
 			case "ce":
 				ClearLastInput();
@@ -108,27 +110,30 @@ public class Calculator : MonoBehaviour {
             case "^":
                 result = Mathf.Pow(x, y);
                 break;
-        }
-
-		return result;
-	}
-
-    public static float CalculateSqrt(float x, string ap)
-    {
-        float result = 0.0f;
-
-        switch (ap)
-        {
             case "√":
                 result = Mathf.Sqrt(x);
                 break;
         }
 
-        return result;
+		return result;
     }
 
-	//Add character input to input text string
-	private void AddCharacter(string s){
+    //public static float CalculateSqrt(float x, string ap)
+    //{
+    //float result = 0.0f;
+
+    //  switch (ap)
+    //{
+    //  case "√":
+    //result = Mathf.Sqrt(x);
+    //          break;
+    //}
+
+    //      return result;
+    //}
+
+    //Add character input to input text string
+    private void AddCharacter(string s){
 		//Add only one decimal point
 		if(s == "."){
 			if(!_input.text.ToString().Contains(".")){
