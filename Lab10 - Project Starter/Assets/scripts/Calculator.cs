@@ -103,12 +103,29 @@ public class Calculator : MonoBehaviour {
 				result = x * y;
 				break;
 			case "/":
-				result = x / y;
-				break;
-		}
+                result = x / y;
+                break;
+            case "^":
+                result = Mathf.Pow(x, y);
+                break;
+        }
 
 		return result;
 	}
+
+    public static float CalculateSqrt(float x, string ap)
+    {
+        float result = 0.0f;
+
+        switch (ap)
+        {
+            case "√":
+                result = Mathf.Sqrt(x);
+                break;
+        }
+
+        return result;
+    }
 
 	//Add character input to input text string
 	private void AddCharacter(string s){
